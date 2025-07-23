@@ -1,0 +1,67 @@
+### Python ###
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual environment
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# PyCharm, VSCode
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# pytest, coverage, mypy
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+*.cover
+
+# Logs and databases
+*.log
+*.sqlite
+*.db
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+*.manifest
+*.spec
+
+# Environments
+.env
+.env.local
+.env.*.local
+
+### FastAPI / Web ###
+# Uvicorn logs
+uvicorn.log
+
+# Static files (if collected)
+staticfiles/
+mediafiles/
+
+# Docker
+docker-compose.override.yml
+
+# macOS
+.DS_Store
+
+# CI/CD
+.cache/
