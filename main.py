@@ -8,9 +8,6 @@ import random
 
 app = FastAPI()
 
-# Подключение статических файлов (для реального проекта нужно создать директорию static)
-# app.mount("/static", StaticFiles(directory="static"), name="static")
-
 def get_base_html(title: str, content: str):
     return f"""
     <!DOCTYPE html>
@@ -797,13 +794,10 @@ async def branch_detail(city: str):
 async def random_number():
     return {"number": random.randint(1, 100)}
 
-# Добавим обработку пользовательского агента
 @app.get("/api/user-agent")
 async def read_user_agent(request: Request):
     user_agent = request.headers.get("user-agent")
     return {"user_agent": user_agent}
-
-# Добавим страницу 404 для несуществующих маршрутов
 @app.exception_handler(404)
 async def not_found_exception_handler(request: Request, exc):
     content = """
